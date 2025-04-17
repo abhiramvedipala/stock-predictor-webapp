@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📈 Stock Price Predictor</h1>
+    <form method="post" action="/predict">
+        <input type="text" name="symbol" placeholder="Enter stock symbol (e.g., AAPL)" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if predictions %}
+        <h2>30-Day Prediction for {{ symbol }}</h2>
+        <ul>
+            {% for date, price in predictions %}
+                <li>{{ date.strftime('%Y-%m-%d') }}: ${{ '%.2f'|format(price) }}</li>
+            {% endfor %}
+        </ul>
+    {% elif error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
