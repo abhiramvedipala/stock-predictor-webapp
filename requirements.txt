@@ -9,7 +9,9 @@ cycler==0.12.1
 fastapi==0.115.12
 fonttools==4.57.0
 frozendict==2.4.6
+gunicorn==23.0.0
 h11==0.14.0
+httptools==0.6.4
 idna==3.10
 Jinja2==3.1.6
 joblib==1.4.2
@@ -27,8 +29,10 @@ pydantic==2.11.3
 pydantic_core==2.33.1
 pyparsing==3.2.3
 python-dateutil==2.9.0.post0
+python-dotenv==1.1.0
 python-multipart==0.0.20
 pytz==2025.2
+PyYAML==6.0.2
 requests==2.32.3
 scikit-learn==1.6.1
 scipy==1.15.2
@@ -42,4 +46,7 @@ typing_extensions==4.13.2
 tzdata==2025.2
 urllib3==2.4.0
 uvicorn==0.34.1
+uvloop==0.21.0
+watchfiles==1.0.5
+websockets==15.0.1
 yfinance==0.2.55
